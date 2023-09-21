@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/master/src/Core/System/SystemConfig/Schema/config.xsd">
+    <card>
+        <title>Sovendus Setup</title>
+        <title lang="de-DE">Sovendus Einstellungen</title>
+        <input-field type="bool">
+            <name>enabled</name>
+            <label>Activated</label>
+            <label lang="de-DE">Aktiviert</label>
+        </input-field>
+        <input-field type="int">
+            <name>trafficSourceNumber</name>
+            <label>Traffic Source Number</label>
+            <label lang="de-DE">Traffic Source Number</label>
+            <placeholder>12345</placeholder>
+            <helpText>The traffic source number is used to assign your store in the Sovendus system. You can find it in your integration documentation.</helpText>
+            <helpText lang="de-DE">Durch die Traffic-Source-Number wird Ihr Shop im Sovendus System zugeordnet. Sie finden sie in Ihrer Integrations-Dokumentation.</helpText>
+            <copyable>true</copyable>
+        </input-field>
+        <input-field type="int">
+            <name>trafficMediumNumber</name>
+            <label>Traffic Medium Number</label>
+            <label lang="de-DE">Traffic Medium Number</label>
+            <placeholder>1</placeholder>
+            <helpText>The traffic medium number is used to assign your integration in the Sovendus system. You can find it in your integration documentation.</helpText>
+            <helpText lang="de-DE">Durch die Traffic-Medium-Number wird Ihre Einbindung im Sovendus System zugeordnet. Sie finden sie in Ihrer Integrations-Dokumentation.</helpText>
+            <copyable>true</copyable>
+        </input-field>
+        <input-field type="single-select">
+            <name>bannerLocation</name>
+            <label>Banner Location</label>
+            <label lang="de-DE">Banner Position</label>
+             <helpText>In case you're using a sticky banner, this option doesnt matter.</helpText>
+            <helpText lang="de-DE">Falls Sie ein Sticky banner verwenden, spielt diese Option keine Rolle</helpText>
+            <defaultValue>belowThankYouMessage</defaultValue>
+            <options>
+                <option>
+                    <id>belowThankYouMessage</id>
+                    <name>Below Thank You Message</name>
+                    <name lang="de-DE">Unter Danke Nachricht</name>
+                </option>
+                <option>
+                    <id>aboveThankYouMessage</id>
+                    <name>Above Thank You Message</name>
+                    <name lang="de-DE">Über Danke Nachricht</name>
+                </option>
+            </options>
+        </input-field>
+    </card>
+</config>

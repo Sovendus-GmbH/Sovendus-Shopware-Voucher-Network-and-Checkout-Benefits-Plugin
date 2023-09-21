@@ -1,0 +1,41 @@
+{
+    "name": "sov/sovendus",
+    "description": "Sovendus",
+    "version": "1.0.0",
+    "type": "shopware-platform-plugin",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Sovendus - Marcus Brandstaetter"
+        }
+    ],
+    "require": {
+        "shopware/core": "~6.4",
+        "shopware/storefront": "*"
+    },
+    "extra": {
+        "shopware-plugin-class": "Sov\\Sovendus\\SovendusPlugin",
+        "copyright": "Sovendus",
+        "label": {
+            "de-DE": "Sovendus - Voucher Network & Checkout Benefits",
+            "en-GB": "Sovendus - Voucher Network & Checkout Benefits"
+        },
+        "description": {
+            "de-DE": "Sovendus",
+            "en-GB": "Sovendus"
+        },
+        "manufacturerLink": {
+            "de-DE": "https://www.sovendus.de",
+            "en-GB": "https://www.sovendus.de"
+        },
+        "supportLink": {
+            "de-DE": "https://online.sovendus.com/kontakt/kontakt-firmenkunden/",
+            "en-GB": "https://online.sovendus.com/kontakt/kontakt-firmenkunden/"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Sov\\Sovendus\\": "src/"
+        }
+    }
+}
