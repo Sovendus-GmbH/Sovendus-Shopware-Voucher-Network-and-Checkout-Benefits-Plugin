@@ -1,2 +1,2 @@
-# sovendus-shopware-voucher-network
-Official Sovendus Voucher Network &amp; Checkout Benefits Plugin for Shopware
+# Sovendus Voucher Network & Checkout Benefits Plugin for Shopware
+Official Sovendus Voucher Network & Checkout Benefits Plugin for Shopware
