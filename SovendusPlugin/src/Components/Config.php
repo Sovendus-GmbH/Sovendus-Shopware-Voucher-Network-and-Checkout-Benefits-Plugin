@@ -19,7 +19,6 @@ class Config
     protected int $trafficSourceNumber;
     protected int $trafficMediumNumber;
     protected string $bannerLocation;
-    protected string $loggingLevel;
 
     public function __construct(SystemConfigService $systemConfigService, string $salesChannelId)
     {
@@ -30,7 +29,6 @@ class Config
         $this->trafficSourceNumber = !is_null($systemConfigService->get($this->path . 'trafficSourceNumber', $salesChannelId)) ? (int) $systemConfigService->get($this->path . 'trafficSourceNumber', $salesChannelId) : 0;
         $this->trafficMediumNumber = !is_null($systemConfigService->get($this->path . 'trafficMediumNumber', $salesChannelId)) ? (int) $systemConfigService->get($this->path . 'trafficMediumNumber', $salesChannelId) : 0;
         $this->bannerLocation = !is_null($systemConfigService->get($this->path . 'bannerLocation', $salesChannelId)) ? $systemConfigService->get($this->path . 'bannerLocation', $salesChannelId) : self::BANNER_POSITION_BELOW_FINISH_TEASER;
-        $this->loggingLevel = !is_null($systemConfigService->get($this->path . 'loggingLevel', $salesChannelId)) ? $systemConfigService->get($this->path . 'loggingLevel', $salesChannelId) : self::LOGGING_LEVEL_ERROR;
     }
 
     /**
