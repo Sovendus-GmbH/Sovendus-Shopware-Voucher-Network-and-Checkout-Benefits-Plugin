@@ -5,7 +5,7 @@ Official Sovendus Voucher Network & Checkout Benefits Plugin for Shopware
 coming soon...
 ## Manual Installation on Shopware
 
-1. Download the latest version [from here](https://raw.githubusercontent.com/Sovendus-GmbH/sovendus-shopware-voucher-network/main/releases/sovendus-shopware-voucher-network-latest.zip)
+1. Download the latest version [from here](https://raw.githubusercontent.com/Sovendus-GmbH/Sovendus-Shopware-Voucher-Network-and-Checkout-Benefits-Plugin/main/releases/sovendus-shopware-voucher-network-latest.zip)
 2. Go to myshop.com/admin#/sw/extension/my-extensions
 3. On the top right, click on "Upload Extension" and select the downloaded plugin zip file.
 
