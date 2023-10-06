@@ -9,7 +9,6 @@ use Symfony\Component\HttpFoundation\RequestStack;
 use Sov\Sovendus\Service\ConfigService;
 use Shopware\Core\Checkout\Customer\Aggregate\CustomerAddress\CustomerAddressEntity;
 use Shopware\Core\Checkout\Customer\CustomerEntity;
-use Shopware\Core\Checkout\Order\Aggregate\OrderAddress\OrderAddressEntity;
 use Shopware\Core\Checkout\Order\OrderEntity;
 use Shopware\Core\System\Currency\CurrencyEntity;
 
@@ -70,16 +69,14 @@ class SovendusData extends Struct
         $this->timestamp = time();
     }
 
-    public function initializeSovendusData(RequestStack $requestStack, ConfigService $configService, ?OrderEntity $order, ?CustomerEntity $customer, ?CurrencyEntity $currency)
+    public function initializeSovendusData(RequestStack $requestStack, ConfigService $configService, ?OrderEntity $order, ?CurrencyEntity $currency)
     {
         $this->configService = $configService;
         $this->order = $order;
-        $this->customer = $customer;
         $this->currency = $currency;
         $this->timestamp = time();
-
+        
         $this->initializeCurrencyData();
-        $this->initializeCustomerData();
         $this->initializeOrderData();
         $this->initializeSessionId($requestStack);
     }
@@ -89,9 +86,10 @@ class SovendusData extends Struct
             $this->orderCurrency = $this->currency->getIsoCode();
         }
     }
-
-    protected function initializeCustomerData(): void
+    
+    public function initializeCustomerData(?CustomerEntity $customer): void
     {
+        $this->customer = $customer;
         if (!is_null($this->customer)) {
             $this->consumerEmail = $this->customer->getEmail();
             $this->consumerFirstName = $this->customer->getFirstName();
@@ -129,12 +127,8 @@ class SovendusData extends Struct
         $this->consumerZipcode = $address->getZipcode();
         $this->consumerCity = $address->getCity();
         $this->initializeStreetAndStreetNumber($address->getStreet());
-        if (!is_null($address->getCountry())) {
-            if (!is_null($address->getCountry()->getTranslated())) {
-                if (isset($address->getCountry()->getTranslated()['name'])) {
-                    $this->consumerCountry = $address->getCountry()->getTranslated()['name'];
-                }
-            }
+        if (!is_null($address->getCountry())) {                
+            $this->consumerCountry = $address->getCountry()->iso;
         }
         if (!is_null($address->getPhoneNumber())) {
             $this->consumerPhone = $address->getPhoneNumber();

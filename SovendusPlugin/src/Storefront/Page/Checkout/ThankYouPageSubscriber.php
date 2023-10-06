@@ -10,36 +10,41 @@ use Shopware\Storefront\Page\Checkout\Finish\CheckoutFinishPageLoadedEvent;
 use Sov\Sovendus\Components\SovendusData;
 use Sov\Sovendus\Service\ConfigService;
 
-class ThankYouPageSubscriber implements EventSubscriberInterface {
+class ThankYouPageSubscriber implements EventSubscriberInterface
+{
 
     public const EXTENSION_NAME = 'sovendusData';
 
     protected RequestStack $requestStack;
     protected ConfigService $configService;
 
-    public function __construct(RequestStack $requestStack, ConfigService $configService) {
+    public function __construct(RequestStack $requestStack, ConfigService $configService)
+    {
         $this->requestStack = $requestStack;
         $this->configService = $configService;
     }
 
-    public static function getSubscribedEvents(): array {
+    public static function getSubscribedEvents(): array
+    {
         return [
             CheckoutFinishPageLoadedEvent::class => 'onCheckoutFinishPageLoaded'
         ];
     }
 
-    public function onCheckoutFinishPageLoaded(CheckoutFinishPageLoadedEvent $event): void {
+    public function onCheckoutFinishPageLoaded(CheckoutFinishPageLoadedEvent $event): void
+    {
         $config = $this->configService->getConfig();
         $sovendusData = new SovendusData();
-        if ($config && !is_null($config) && $config->isEnabled() && ($config->getTrafficSourceNumber() != '') && ($config->getTrafficMediumNumber() != '')) {
-            $sovendusData->initializeSovendusData($this->requestStack, $this->configService, $event->getPage()->getOrder(), $event->getSalesChannelContext()->getCustomer(), $event->getSalesChannelContext()->getCurrency());
+        $sovendusData->initializeCustomerData($event->getSalesChannelContext()->getCustomer());
+        if ($config && !is_null($config) && $config->isEnabled($sovendusData->consumerCountry) && (($trafficSourceNumber = $config->getTrafficSourceNumber($sovendusData->consumerCountry)) != '') && (($trafficMediumNumber = $config->getTrafficMediumNumber($sovendusData->consumerCountry)) != '')) {
+            $sovendusData->initializeSovendusData($this->requestStack, $this->configService, $event->getPage()->getOrder(), $event->getSalesChannelContext()->getCurrency());
 
             $sovendusData->assign([
-                'enabled' => $config->isEnabled(),
+                'enabled' => true,
                 'iframeContainerId' => 'sovendus-container-1',
                 'bannerLocation' => $config->getbannerLocation(),
-                'trafficSourceNumber' => $config->getTrafficSourceNumber(),
-                'trafficMediumNumber' => $config->getTrafficMediumNumber(),
+                'trafficSourceNumber' => $trafficSourceNumber,
+                'trafficMediumNumber' => $trafficMediumNumber,
                 'consumerSalutation' => $sovendusData->consumerSalutation,
                 'consumerFirstName' => $sovendusData->consumerFirstName,
                 'consumerLastName' => $sovendusData->consumerLastName,
@@ -60,5 +65,4 @@ class ThankYouPageSubscriber implements EventSubscriberInterface {
         }
         $event->getContext()->addExtension(self::EXTENSION_NAME, $sovendusData);
     }
-
 }
