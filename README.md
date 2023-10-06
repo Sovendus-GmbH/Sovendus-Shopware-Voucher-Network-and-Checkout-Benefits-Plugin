@@ -14,4 +14,4 @@ coming soon...
 
 1. Go to myshop.com/admin#/sw/extension/my-extensions
 2. Search for the "Sovendus - Voucher Network & Checkout Benefits" plugin, click on the 3 dots on the right and then click on configure
-3. Enter the trafficSourceNumber and trafficMediumNumber, you have received in your integration documentation and click on the activate toggle. Once saved, the sovendus banner will be visible on the post checkout page
+3. Enter the trafficSourceNumber and trafficMediumNumber, you have received in your integration documentation for each country and click on the activate toggle. Once saved, the sovendus banner will be visible on the post checkout page
