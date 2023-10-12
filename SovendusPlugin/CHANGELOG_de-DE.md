@@ -4,3 +4,5 @@
 - Entferne unbenutzte Variablen
 # 1.1.0
 - Support für mehrere Source/Medium Nummern
+# 1.1.1
+- Benutze https für flexibleiframe

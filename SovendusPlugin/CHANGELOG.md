@@ -4,3 +4,5 @@
 - remove unused variables
 # 1.1.0
 - Add support for multiple source/medium ids
+# 1.1.1
+- Use https for flexibleiframe
