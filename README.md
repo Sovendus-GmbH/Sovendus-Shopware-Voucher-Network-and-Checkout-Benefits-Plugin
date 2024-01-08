@@ -1,11 +1,21 @@
 # Sovendus Voucher Network & Checkout Benefits Plugin for Shopware
 Official Sovendus Voucher Network & Checkout Benefits Plugin for Shopware
 
-## Install through Shopware App Store
-coming soon...
+## Install through Composer
+
+1. Open a terminal and cd into your Shopware installation directory (where composer.json file resides)
+2. Execute the following command:
+    ``` bash
+    composer require sovendus/sovendus_voucher_network_and_checkout_benefits
+    ```
+3. You can easily activate this plugin via the console:
+    ``` bash
+    bin/console plugin:refresh​
+    bin/console plugin:install –-activate sovendus_voucher_network_and_checkout_benefits
+    ```
 ## Manual Installation on Shopware
 
-1. Download the latest version [from here](https://raw.githubusercontent.com/Sovendus-GmbH/Sovendus-Shopware-Voucher-Network-and-Checkout-Benefits-Plugin/main/releases/sovendus-shopware-voucher-network-latest.zip)
+1. Download the latest version [from here](https://github.com/Sovendus-GmbH/Sovendus-Shopware-Voucher-Network-and-Checkout-Benefits-Plugin/releases/)
 2. Go to myshop.com/admin#/sw/extension/my-extensions
 3. On the top right, click on "Upload Extension" and select the downloaded plugin zip file.
 
