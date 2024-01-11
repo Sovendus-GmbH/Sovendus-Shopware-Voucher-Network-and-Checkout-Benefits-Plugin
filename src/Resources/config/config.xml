@@ -153,6 +153,31 @@
         </input-field>
     </card>
     <card>
+        <title>Ireland Settings</title>
+        <title lang="de-DE">Irland Einstellungen</title>
+        <input-field type="bool">
+            <name>ieEnabled</name>
+            <label>Ireland Activated</label>
+            <label lang="de-DE">Irland Aktiviert</label>
+        </input-field>
+        <input-field type="int">
+            <name>ieTrafficSourceNumber</name>
+            <label>Ireland Traffic Source Number</label>
+            <label lang="de-DE">Irland Traffic Source Number</label>
+            <helpText>The traffic source number is used to assign your store in the Sovendus system. You can find it in your integration documentation.</helpText>
+            <helpText lang="de-DE">Durch die Traffic-Source-Number wird Ihr Shop im Sovendus System zugeordnet. Sie finden sie in Ihrer Integrations-Dokumentation.</helpText>
+            <copyable>true</copyable>
+        </input-field>
+        <input-field type="int">
+            <name>ieTrafficMediumNumber</name>
+            <label>Ireland Traffic Medium Number</label>
+            <label lang="de-DE">Irland Traffic Medium Number</label>
+            <helpText>The traffic medium number is used to assign your integration in the Sovendus system. You can find it in your integration documentation.</helpText>
+            <helpText lang="de-DE">Durch die Traffic-Medium-Number wird Ihre Einbindung im Sovendus System zugeordnet. Sie finden sie in Ihrer Integrations-Dokumentation.</helpText>
+            <copyable>true</copyable>
+        </input-field>
+    </card>
+    <card>
         <title>United Kingdom Settings</title>
         <title lang="de-DE">Vereinigtes Königreich Einstellungen</title>
         <input-field type="bool">
