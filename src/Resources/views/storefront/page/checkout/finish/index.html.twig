@@ -15,8 +15,9 @@
                 orderId: '{{ sovendusData.orderId }}',
                 orderValue: '{{ sovendusData.orderValue }}',
                 orderCurrency: '{{ sovendusData.orderCurrency }}',
+                integrationType: "shopware-1.1.4",
                 {% if sovendusData.usedCouponCode %}
-                    usedCouponCode: '{{ sovendusData.usedCouponCode }}'
+                    usedCouponCode: '{{ sovendusData.usedCouponCode }}',
                 {% endif %}
             });
             window.sovConsumer = window.sovConsumer || {};
