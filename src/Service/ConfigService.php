@@ -6,7 +6,7 @@ namespace Sov\Sovendus\Service;
 
 use Shopware\Core\System\SystemConfig\SystemConfigService;
 use Shopware\Core\PlatformRequest;
-use \Shopware\Core\Defaults;
+use Shopware\Core\Defaults;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Sov\Sovendus\Components\Config;
 
