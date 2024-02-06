@@ -6,3 +6,5 @@
 - Support für mehrere Source/Medium Nummern
 # 1.1.1
 - Benutze https für flexibleiframe
+# 1.1.5
+- Fix get default SALES_CHANNEL
