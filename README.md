@@ -11,7 +11,7 @@ Official Sovendus Voucher Network & Checkout Benefits Plugin for Shopware
 3. You can easily activate this plugin via the console:
     ``` bash
     bin/console plugin:refresh​
-    bin/console plugin:install –-activate sovendus_voucher_network_and_checkout_benefits
+    bin/console plugin:install –-activate SovendusPlugin
     ```
 ## Manual Installation on Shopware
 
