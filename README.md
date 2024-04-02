@@ -25,3 +25,11 @@ Official Sovendus Voucher Network & Checkout Benefits Plugin for Shopware
 1. Go to myshop.com/admin#/sw/extension/my-extensions
 2. Search for the "Sovendus - Voucher Network & Checkout Benefits" plugin, click on the 3 dots on the right and then click on configure
 3. Enter the trafficSourceNumber and trafficMediumNumber, you have received in your integration documentation for each country and click on the activate toggle. Once saved, the sovendus banner will be visible on the post checkout page
+
+## Additional setup for usercentrics
+I case you are using the cookie consent tool usercentrics, please follow the steps below
+
+1. Add two custom data processing services
+2. The first service is called Sovendus and should be in the essential category
+3. The second service is called Sovendus-personalized and should be in the category marketing
+4. This makes sure that customer data will only get transmitted to Sovendus if the user consents to it. 
