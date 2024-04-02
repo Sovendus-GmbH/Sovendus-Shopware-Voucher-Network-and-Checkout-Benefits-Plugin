@@ -303,25 +303,50 @@
         </input-field>
     </card>
     <card>
-        <title>Belgium Settings</title>
-        <title lang="de-DE">Belgien Einstellungen</title>
+        <title>Belgium Dutch Settings</title>
+        <title lang="de-DE">Belgien Niederländisch Einstellungen</title>
         <input-field type="bool">
-            <name>beEnabled</name>
-            <label>Belgium Activated</label>
-            <label lang="de-DE">Belgien Aktiviert</label>
+            <name>nlBeEnabled</name>
+            <label>Belgium Dutch Activated</label>
+            <label lang="de-DE">Belgien Niederländisch Aktiviert</label>
         </input-field>
         <input-field type="int">
-            <name>beTrafficSourceNumber</name>
-            <label>Belgium Traffic Source Number</label>
-            <label lang="de-DE">Belgien Traffic Source Number</label>
+            <name>nlBeTrafficSourceNumber</name>
+            <label>Belgium Dutch Traffic Source Number</label>
+            <label lang="de-DE">Belgien Niederländisch Traffic Source Number</label>
             <helpText>The traffic source number is used to assign your store in the Sovendus system. You can find it in your integration documentation.</helpText>
             <helpText lang="de-DE">Durch die Traffic-Source-Number wird Ihr Shop im Sovendus System zugeordnet. Sie finden sie in Ihrer Integrations-Dokumentation.</helpText>
             <copyable>true</copyable>
         </input-field>
         <input-field type="int">
-            <name>beTrafficMediumNumber</name>
-            <label>Belgium Traffic Medium Number</label>
-            <label lang="de-DE">Belgien Traffic Medium Number</label>
+            <name>nlBeTrafficMediumNumber</name>
+            <label>Belgium Dutch Traffic Medium Number</label>
+            <label lang="de-DE">Belgien Niederländisch Traffic Medium Number</label>
+            <helpText>The traffic medium number is used to assign your integration in the Sovendus system. You can find it in your integration documentation.</helpText>
+            <helpText lang="de-DE">Durch die Traffic-Medium-Number wird Ihre Einbindung im Sovendus System zugeordnet. Sie finden sie in Ihrer Integrations-Dokumentation.</helpText>
+            <copyable>true</copyable>
+        </input-field>
+    </card>
+    <card>
+        <title>Belgium French Settings</title>
+        <title lang="de-DE">Belgien Französisch Einstellungen</title>
+        <input-field type="bool">
+            <name>frBeEnabled</name>
+            <label>Belgium French Activated</label>
+            <label lang="de-DE">Belgien Französisch Aktiviert</label>
+        </input-field>
+        <input-field type="int">
+            <name>frBeTrafficSourceNumber</name>
+            <label>Belgium French Traffic Source Number</label>
+            <label lang="de-DE">Belgien Französisch Traffic Source Number</label>
+            <helpText>The traffic source number is used to assign your store in the Sovendus system. You can find it in your integration documentation.</helpText>
+            <helpText lang="de-DE">Durch die Traffic-Source-Number wird Ihr Shop im Sovendus System zugeordnet. Sie finden sie in Ihrer Integrations-Dokumentation.</helpText>
+            <copyable>true</copyable>
+        </input-field>
+        <input-field type="int">
+            <name>frBeTrafficMediumNumber</name>
+            <label>Belgium French Traffic Medium Number</label>
+            <label lang="de-DE">Belgien Französisch Traffic Medium Number</label>
             <helpText>The traffic medium number is used to assign your integration in the Sovendus system. You can find it in your integration documentation.</helpText>
             <helpText lang="de-DE">Durch die Traffic-Medium-Number wird Ihre Einbindung im Sovendus System zugeordnet. Sie finden sie in Ihrer Integrations-Dokumentation.</helpText>
             <copyable>true</copyable>
