@@ -40,9 +40,6 @@
             isActive = true;
         }
         if (isActive && Number(trafficSourceNumber) > 0 && Number(trafficMediumNumber) > 0){
-            const isSovendusSale =   document.cookie.split("; ").find(function (entry) {
-                return entry.startsWith("isSovendusSale=");
-            });
             window.sovIframes = window.sovIframes || [];
             window.sovIframes.push({
                 trafficSourceNumber: trafficSourceNumber,
@@ -53,7 +50,7 @@
                 orderId: '{{ sovendusData.orderId }}',
                 orderValue: '{{ sovendusData.orderValue }}',
                 orderCurrency: '{{ sovendusData.orderCurrency }}',
-                integrationType: "shopware-1.2.0",
+                integrationType: "shopware-1.2.1",
                 {% if sovendusData.usedCouponCode %}
                     usedCouponCode: '{{ sovendusData.usedCouponCode }}',
                 {% endif %}
