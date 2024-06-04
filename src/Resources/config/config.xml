@@ -1,32 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/master/src/Core/System/SystemConfig/Schema/config.xsd">
-
-    <card>
-        <title>Germany Settings</title>
-        <title lang="de-DE">Deutschland Einstellungen</title>
-        <input-field type="bool">
-            <name>deEnabled</name>
-            <label>Germany Activated</label>
-            <label lang="de-DE">Deutschland Aktiviert</label>
-        </input-field>
-        <input-field type="int">
-            <name>deTrafficSourceNumber</name>
-            <label>Germany Traffic Source Number</label>
-            <label lang="de-DE">Deutschland Traffic Source Number</label>
-            <helpText>The traffic source number is used to assign your store in the Sovendus system. You can find it in your integration documentation.</helpText>
-            <helpText lang="de-DE">Durch die Traffic-Source-Number wird Ihr Shop im Sovendus System zugeordnet. Sie finden sie in Ihrer Integrations-Dokumentation.</helpText>
-            <copyable>true</copyable>
-        </input-field>
-        <input-field type="int">
-            <name>deTrafficMediumNumber</name>
-            <label>Germany Traffic Medium Number</label>
-            <label lang="de-DE">Deutschland Traffic Medium Number</label>
-            <helpText>The traffic medium number is used to assign your integration in the Sovendus system. You can find it in your integration documentation.</helpText>
-            <helpText lang="de-DE">Durch die Traffic-Medium-Number wird Ihre Einbindung im Sovendus System zugeordnet. Sie finden sie in Ihrer Integrations-Dokumentation.</helpText>
-            <copyable>true</copyable>
-        </input-field>
-    </card>
     <card>
         <title>Austria Settings</title>
         <title lang="de-DE">Österreich Einstellungen</title>
@@ -53,6 +27,131 @@
         </input-field>
     </card>
     <card>
+        <title>Denmark Settings</title>
+        <title lang="de-DE">Dänemark Einstellungen</title>
+        <input-field type="bool">
+            <name>dkEnabled</name>
+            <label>Denmark Activated</label>
+            <label lang="de-DE">Dänemark Aktiviert</label>
+        </input-field>
+        <input-field type="int">
+            <name>dkTrafficSourceNumber</name>
+            <label>Denmark Traffic Source Number</label>
+            <label lang="de-DE">Dänemark Traffic Source Number</label>
+            <helpText>The traffic source number is used to assign your store in the Sovendus system. You can find it in your integration documentation.</helpText>
+            <helpText lang="de-DE">Durch die Traffic-Source-Number wird Ihr Shop im Sovendus System zugeordnet. Sie finden sie in Ihrer Integrations-Dokumentation.</helpText>
+            <copyable>true</copyable>
+        </input-field>
+        <input-field type="int">
+            <name>dkTrafficMediumNumber</name>
+            <label>Denmark Traffic Medium Number</label>
+            <label lang="de-DE">Dänemark Traffic Medium Number</label>
+            <helpText>The traffic medium number is used to assign your integration in the Sovendus system. You can find it in your integration documentation.</helpText>
+            <helpText lang="de-DE">Durch die Traffic-Medium-Number wird Ihre Einbindung im Sovendus System zugeordnet. Sie finden sie in Ihrer Integrations-Dokumentation.</helpText>
+            <copyable>true</copyable>
+        </input-field>
+    </card>
+    <card>
+        <title>France Settings</title>
+        <title lang="de-DE">Frankreich Einstellungen</title>
+        <input-field type="bool">
+            <name>frEnabled</name>
+            <label>France Activated</label>
+            <label lang="de-DE">Frankreich Aktiviert</label>
+        </input-field>
+        <input-field type="int">
+            <name>frTrafficSourceNumber</name>
+            <label>France Traffic Source Number</label>
+            <label lang="de-DE">Frankreich Traffic Source Number</label>
+            <helpText>The traffic source number is used to assign your store in the Sovendus system. You can find it in your integration documentation.</helpText>
+            <helpText lang="de-DE">Durch die Traffic-Source-Number wird Ihr Shop im Sovendus System zugeordnet. Sie finden sie in Ihrer Integrations-Dokumentation.</helpText>
+            <copyable>true</copyable>
+        </input-field>
+        <input-field type="int">
+            <name>frTrafficMediumNumber</name>
+            <label>France Traffic Medium Number</label>
+            <label lang="de-DE">Frankreich Traffic Medium Number</label>
+            <helpText>The traffic medium number is used to assign your integration in the Sovendus system. You can find it in your integration documentation.</helpText>
+            <helpText lang="de-DE">Durch die Traffic-Medium-Number wird Ihre Einbindung im Sovendus System zugeordnet. Sie finden sie in Ihrer Integrations-Dokumentation.</helpText>
+            <copyable>true</copyable>
+        </input-field>
+    </card>
+    <card>
+        <title>Germany Settings</title>
+        <title lang="de-DE">Deutschland Einstellungen</title>
+        <input-field type="bool">
+            <name>deEnabled</name>
+            <label>Germany Activated</label>
+            <label lang="de-DE">Deutschland Aktiviert</label>
+        </input-field>
+        <input-field type="int">
+            <name>deTrafficSourceNumber</name>
+            <label>Germany Traffic Source Number</label>
+            <label lang="de-DE">Deutschland Traffic Source Number</label>
+            <helpText>The traffic source number is used to assign your store in the Sovendus system. You can find it in your integration documentation.</helpText>
+            <helpText lang="de-DE">Durch die Traffic-Source-Number wird Ihr Shop im Sovendus System zugeordnet. Sie finden sie in Ihrer Integrations-Dokumentation.</helpText>
+            <copyable>true</copyable>
+        </input-field>
+        <input-field type="int">
+            <name>deTrafficMediumNumber</name>
+            <label>Germany Traffic Medium Number</label>
+            <label lang="de-DE">Deutschland Traffic Medium Number</label>
+            <helpText>The traffic medium number is used to assign your integration in the Sovendus system. You can find it in your integration documentation.</helpText>
+            <helpText lang="de-DE">Durch die Traffic-Medium-Number wird Ihre Einbindung im Sovendus System zugeordnet. Sie finden sie in Ihrer Integrations-Dokumentation.</helpText>
+            <copyable>true</copyable>
+        </input-field>
+    </card>
+    <card>
+        <title>Ireland Settings</title>
+        <title lang="de-DE">Irland Einstellungen</title>
+        <input-field type="bool">
+            <name>ieEnabled</name>
+            <label>Ireland Activated</label>
+            <label lang="de-DE">Irland Aktiviert</label>
+        </input-field>
+        <input-field type="int">
+            <name>ieTrafficSourceNumber</name>
+            <label>Ireland Traffic Source Number</label>
+            <label lang="de-DE">Irland Traffic Source Number</label>
+            <helpText>The traffic source number is used to assign your store in the Sovendus system. You can find it in your integration documentation.</helpText>
+            <helpText lang="de-DE">Durch die Traffic-Source-Number wird Ihr Shop im Sovendus System zugeordnet. Sie finden sie in Ihrer Integrations-Dokumentation.</helpText>
+            <copyable>true</copyable>
+        </input-field>
+        <input-field type="int">
+            <name>ieTrafficMediumNumber</name>
+            <label>Ireland Traffic Medium Number</label>
+            <label lang="de-DE">Irland Traffic Medium Number</label>
+            <helpText>The traffic medium number is used to assign your integration in the Sovendus system. You can find it in your integration documentation.</helpText>
+            <helpText lang="de-DE">Durch die Traffic-Medium-Number wird Ihre Einbindung im Sovendus System zugeordnet. Sie finden sie in Ihrer Integrations-Dokumentation.</helpText>
+            <copyable>true</copyable>
+        </input-field>
+    </card>
+    <card>
+        <title>Italy Settings</title>
+        <title lang="de-DE">Italien Einstellungen</title>
+        <input-field type="bool">
+            <name>itEnabled</name>
+            <label>Italy Activated</label>
+            <label lang="de-DE">Italien Aktiviert</label>
+        </input-field>
+        <input-field type="int">
+            <name>itTrafficSourceNumber</name>
+            <label>Italy Traffic Source Number</label>
+            <label lang="de-DE">Italien Traffic Source Number</label>
+            <helpText>The traffic source number is used to assign your store in the Sovendus system. You can find it in your integration documentation.</helpText>
+            <helpText lang="de-DE">Durch die Traffic-Source-Number wird Ihr Shop im Sovendus System zugeordnet. Sie finden sie in Ihrer Integrations-Dokumentation.</helpText>
+            <copyable>true</copyable>
+        </input-field>
+        <input-field type="int">
+            <name>itTrafficMediumNumber</name>
+            <label>Italy Traffic Medium Number</label>
+            <label lang="de-DE">Italien Traffic Medium Number</label>
+            <helpText>The traffic medium number is used to assign your integration in the Sovendus system. You can find it in your integration documentation.</helpText>
+            <helpText lang="de-DE">Durch die Traffic-Medium-Number wird Ihre Einbindung im Sovendus System zugeordnet. Sie finden sie in Ihrer Integrations-Dokumentation.</helpText>
+            <copyable>true</copyable>
+        </input-field>
+    </card>
+    <card>
         <title>Netherland Settings</title>
         <title lang="de-DE">Niederlande Einstellungen</title>
         <input-field type="bool">
@@ -72,6 +171,31 @@
             <name>nlTrafficMediumNumber</name>
             <label>Netherland Traffic Medium Number</label>
             <label lang="de-DE">Niederlande Traffic Medium Number</label>
+            <helpText>The traffic medium number is used to assign your integration in the Sovendus system. You can find it in your integration documentation.</helpText>
+            <helpText lang="de-DE">Durch die Traffic-Medium-Number wird Ihre Einbindung im Sovendus System zugeordnet. Sie finden sie in Ihrer Integrations-Dokumentation.</helpText>
+            <copyable>true</copyable>
+        </input-field>
+    </card>
+    <card>
+        <title>Norway Settings</title>
+        <title lang="de-DE">Norwegen Einstellungen</title>
+        <input-field type="bool">
+            <name>noEnabled</name>
+            <label>Norway Activated</label>
+            <label lang="de-DE">Norwegen Aktiviert</label>
+        </input-field>
+        <input-field type="int">
+            <name>noTrafficSourceNumber</name>
+            <label>Norway Traffic Source Number</label>
+            <label lang="de-DE">Norwegen Traffic Source Number</label>
+            <helpText>The traffic source number is used to assign your store in the Sovendus system. You can find it in your integration documentation.</helpText>
+            <helpText lang="de-DE">Durch die Traffic-Source-Number wird Ihr Shop im Sovendus System zugeordnet. Sie finden sie in Ihrer Integrations-Dokumentation.</helpText>
+            <copyable>true</copyable>
+        </input-field>
+        <input-field type="int">
+            <name>noTrafficMediumNumber</name>
+            <label>Norway Traffic Medium Number</label>
+            <label lang="de-DE">Norwegen Traffic Medium Number</label>
             <helpText>The traffic medium number is used to assign your integration in the Sovendus system. You can find it in your integration documentation.</helpText>
             <helpText lang="de-DE">Durch die Traffic-Medium-Number wird Ihre Einbindung im Sovendus System zugeordnet. Sie finden sie in Ihrer Integrations-Dokumentation.</helpText>
             <copyable>true</copyable>
@@ -128,75 +252,25 @@
         </input-field>
     </card>
     <card>
-        <title>France Settings</title>
-        <title lang="de-DE">Frankreich Einstellungen</title>
+        <title>Switzerland Italian Settings</title>
+        <title lang="de-DE">Schweiz Italienisch Einstellungen</title>
         <input-field type="bool">
-            <name>frEnabled</name>
-            <label>France Activated</label>
-            <label lang="de-DE">Frankreich Aktiviert</label>
+            <name>itChEnabled</name>
+            <label>Switzerland Italian Activated</label>
+            <label lang="de-DE">Schweiz Italienisch Aktiviert</label>
         </input-field>
         <input-field type="int">
-            <name>frTrafficSourceNumber</name>
-            <label>France Traffic Source Number</label>
-            <label lang="de-DE">Frankreich Traffic Source Number</label>
+            <name>itChTrafficSourceNumber</name>
+            <label>Switzerland Italian Traffic Source Number</label>
+            <label lang="de-DE">Schweiz Italienisch Traffic Source Number</label>
             <helpText>The traffic source number is used to assign your store in the Sovendus system. You can find it in your integration documentation.</helpText>
             <helpText lang="de-DE">Durch die Traffic-Source-Number wird Ihr Shop im Sovendus System zugeordnet. Sie finden sie in Ihrer Integrations-Dokumentation.</helpText>
             <copyable>true</copyable>
         </input-field>
         <input-field type="int">
-            <name>frTrafficMediumNumber</name>
-            <label>France Traffic Medium Number</label>
-            <label lang="de-DE">Frankreich Traffic Medium Number</label>
-            <helpText>The traffic medium number is used to assign your integration in the Sovendus system. You can find it in your integration documentation.</helpText>
-            <helpText lang="de-DE">Durch die Traffic-Medium-Number wird Ihre Einbindung im Sovendus System zugeordnet. Sie finden sie in Ihrer Integrations-Dokumentation.</helpText>
-            <copyable>true</copyable>
-        </input-field>
-    </card>
-    <card>
-        <title>Italy Settings</title>
-        <title lang="de-DE">Italien Einstellungen</title>
-        <input-field type="bool">
-            <name>itEnabled</name>
-            <label>Italy Activated</label>
-            <label lang="de-DE">Italien Aktiviert</label>
-        </input-field>
-        <input-field type="int">
-            <name>itTrafficSourceNumber</name>
-            <label>Italy Traffic Source Number</label>
-            <label lang="de-DE">Italien Traffic Source Number</label>
-            <helpText>The traffic source number is used to assign your store in the Sovendus system. You can find it in your integration documentation.</helpText>
-            <helpText lang="de-DE">Durch die Traffic-Source-Number wird Ihr Shop im Sovendus System zugeordnet. Sie finden sie in Ihrer Integrations-Dokumentation.</helpText>
-            <copyable>true</copyable>
-        </input-field>
-        <input-field type="int">
-            <name>itTrafficMediumNumber</name>
-            <label>Italy Traffic Medium Number</label>
-            <label lang="de-DE">Italien Traffic Medium Number</label>
-            <helpText>The traffic medium number is used to assign your integration in the Sovendus system. You can find it in your integration documentation.</helpText>
-            <helpText lang="de-DE">Durch die Traffic-Medium-Number wird Ihre Einbindung im Sovendus System zugeordnet. Sie finden sie in Ihrer Integrations-Dokumentation.</helpText>
-            <copyable>true</copyable>
-        </input-field>
-    </card>
-    <card>
-        <title>Ireland Settings</title>
-        <title lang="de-DE">Irland Einstellungen</title>
-        <input-field type="bool">
-            <name>ieEnabled</name>
-            <label>Ireland Activated</label>
-            <label lang="de-DE">Irland Aktiviert</label>
-        </input-field>
-        <input-field type="int">
-            <name>ieTrafficSourceNumber</name>
-            <label>Ireland Traffic Source Number</label>
-            <label lang="de-DE">Irland Traffic Source Number</label>
-            <helpText>The traffic source number is used to assign your store in the Sovendus system. You can find it in your integration documentation.</helpText>
-            <helpText lang="de-DE">Durch die Traffic-Source-Number wird Ihr Shop im Sovendus System zugeordnet. Sie finden sie in Ihrer Integrations-Dokumentation.</helpText>
-            <copyable>true</copyable>
-        </input-field>
-        <input-field type="int">
-            <name>ieTrafficMediumNumber</name>
-            <label>Ireland Traffic Medium Number</label>
-            <label lang="de-DE">Irland Traffic Medium Number</label>
+            <name>itChTrafficMediumNumber</name>
+            <label>Switzerland Italian Traffic Medium Number</label>
+            <label lang="de-DE">Schweiz Italienisch Traffic Medium Number</label>
             <helpText>The traffic medium number is used to assign your integration in the Sovendus system. You can find it in your integration documentation.</helpText>
             <helpText lang="de-DE">Durch die Traffic-Medium-Number wird Ihre Einbindung im Sovendus System zugeordnet. Sie finden sie in Ihrer Integrations-Dokumentation.</helpText>
             <copyable>true</copyable>
@@ -222,81 +296,6 @@
             <name>ukTrafficMediumNumber</name>
             <label>United Kingdom Traffic Medium Number</label>
             <label lang="de-DE">Vereinigtes Königreich Traffic Medium Number</label>
-            <helpText>The traffic medium number is used to assign your integration in the Sovendus system. You can find it in your integration documentation.</helpText>
-            <helpText lang="de-DE">Durch die Traffic-Medium-Number wird Ihre Einbindung im Sovendus System zugeordnet. Sie finden sie in Ihrer Integrations-Dokumentation.</helpText>
-            <copyable>true</copyable>
-        </input-field>
-    </card>
-    <card>
-        <title>Denmark Settings</title>
-        <title lang="de-DE">Dänemark Einstellungen</title>
-        <input-field type="bool">
-            <name>dkEnabled</name>
-            <label>Denmark Activated</label>
-            <label lang="de-DE">Dänemark Aktiviert</label>
-        </input-field>
-        <input-field type="int">
-            <name>dkTrafficSourceNumber</name>
-            <label>Denmark Traffic Source Number</label>
-            <label lang="de-DE">Dänemark Traffic Source Number</label>
-            <helpText>The traffic source number is used to assign your store in the Sovendus system. You can find it in your integration documentation.</helpText>
-            <helpText lang="de-DE">Durch die Traffic-Source-Number wird Ihr Shop im Sovendus System zugeordnet. Sie finden sie in Ihrer Integrations-Dokumentation.</helpText>
-            <copyable>true</copyable>
-        </input-field>
-        <input-field type="int">
-            <name>dkTrafficMediumNumber</name>
-            <label>Denmark Traffic Medium Number</label>
-            <label lang="de-DE">Dänemark Traffic Medium Number</label>
-            <helpText>The traffic medium number is used to assign your integration in the Sovendus system. You can find it in your integration documentation.</helpText>
-            <helpText lang="de-DE">Durch die Traffic-Medium-Number wird Ihre Einbindung im Sovendus System zugeordnet. Sie finden sie in Ihrer Integrations-Dokumentation.</helpText>
-            <copyable>true</copyable>
-        </input-field>
-    </card>
-    <card>
-        <title>Sweden Settings</title>
-        <title lang="de-DE">Schweden Einstellungen</title>
-        <input-field type="bool">
-            <name>seEnabled</name>
-            <label>Sweden Activated</label>
-            <label lang="de-DE">Schweden Aktiviert</label>
-        </input-field>
-        <input-field type="int">
-            <name>seTrafficSourceNumber</name>
-            <label>Sweden Traffic Source Number</label>
-            <label lang="de-DE">Schweden Traffic Source Number</label>
-            <helpText>The traffic source number is used to assign your store in the Sovendus system. You can find it in your integration documentation.</helpText>
-            <helpText lang="de-DE">Durch die Traffic-Source-Number wird Ihr Shop im Sovendus System zugeordnet. Sie finden sie in Ihrer Integrations-Dokumentation.</helpText>
-            <copyable>true</copyable>
-        </input-field>
-        <input-field type="int">
-            <name>seTrafficMediumNumber</name>
-            <label>Sweden Traffic Medium Number</label>
-            <label lang="de-DE">Schweden Traffic Medium Number</label>
-            <helpText>The traffic medium number is used to assign your integration in the Sovendus system. You can find it in your integration documentation.</helpText>
-            <helpText lang="de-DE">Durch die Traffic-Medium-Number wird Ihre Einbindung im Sovendus System zugeordnet. Sie finden sie in Ihrer Integrations-Dokumentation.</helpText>
-            <copyable>true</copyable>
-        </input-field>
-    </card>
-    <card>
-        <title>Spain Settings</title>
-        <title lang="de-DE">Spanien Einstellungen</title>
-        <input-field type="bool">
-            <name>esEnabled</name>
-            <label>Spain Activated</label>
-            <label lang="de-DE">Spanien Aktiviert</label>
-        </input-field>
-        <input-field type="int">
-            <name>esTrafficSourceNumber</name>
-            <label>Spain Traffic Source Number</label>
-            <label lang="de-DE">Spanien Traffic Source Number</label>
-            <helpText>The traffic source number is used to assign your store in the Sovendus system. You can find it in your integration documentation.</helpText>
-            <helpText lang="de-DE">Durch die Traffic-Source-Number wird Ihr Shop im Sovendus System zugeordnet. Sie finden sie in Ihrer Integrations-Dokumentation.</helpText>
-            <copyable>true</copyable>
-        </input-field>
-        <input-field type="int">
-            <name>esTrafficMediumNumber</name>
-            <label>Spain Traffic Medium Number</label>
-            <label lang="de-DE">Spanien Traffic Medium Number</label>
             <helpText>The traffic medium number is used to assign your integration in the Sovendus system. You can find it in your integration documentation.</helpText>
             <helpText lang="de-DE">Durch die Traffic-Medium-Number wird Ihre Einbindung im Sovendus System zugeordnet. Sie finden sie in Ihrer Integrations-Dokumentation.</helpText>
             <copyable>true</copyable>

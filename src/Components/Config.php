@@ -31,7 +31,8 @@ class Config
             "NL" => !is_null($systemConfigService->get($this->path . 'nlEnabled', $salesChannelId)) ? $systemConfigService->get($this->path . 'nlEnabled', $salesChannelId) : false,
             "CH" => array(
                 "de" => (!is_null($systemConfigService->get($this->path . 'deChEnabled', $salesChannelId)) ? $systemConfigService->get($this->path . 'deChEnabled', $salesChannelId) : false),
-                "fr" => (!is_null($systemConfigService->get($this->path . 'frChEnabled', $salesChannelId)) ? $systemConfigService->get($this->path . 'frChEnabled', $salesChannelId) : false)
+                "fr" => (!is_null($systemConfigService->get($this->path . 'frChEnabled', $salesChannelId)) ? $systemConfigService->get($this->path . 'frChEnabled', $salesChannelId) : false),
+                "it" => (!is_null($systemConfigService->get($this->path . 'itChEnabled', $salesChannelId)) ? $systemConfigService->get($this->path . 'itChEnabled', $salesChannelId) : false)
             ),
             "FR" => !is_null($systemConfigService->get($this->path . 'frEnabled', $salesChannelId)) ? $systemConfigService->get($this->path . 'frEnabled', $salesChannelId) : false,
             "IT" => !is_null($systemConfigService->get($this->path . 'itEnabled', $salesChannelId)) ? $systemConfigService->get($this->path . 'itEnabled', $salesChannelId) : false,
@@ -45,6 +46,7 @@ class Config
                 "fr" => !is_null($systemConfigService->get($this->path . 'frBeEnabled', $salesChannelId)) ? $systemConfigService->get($this->path . 'frBeEnabled', $salesChannelId) : false
             ),
             "PL" => !is_null($systemConfigService->get($this->path . 'plEnabled', $salesChannelId)) ? $systemConfigService->get($this->path . 'plEnabled', $salesChannelId) : false,
+            "NO" => !is_null($systemConfigService->get($this->path . 'noEnabled', $salesChannelId)) ? $systemConfigService->get($this->path . 'noEnabled', $salesChannelId) : false,
         );
         $this->trafficSourceNumber = array(
             "DE" => !is_null($systemConfigService->get($this->path . 'deTrafficSourceNumber', $salesChannelId)) ? (int) $systemConfigService->get($this->path . 'deTrafficSourceNumber', $salesChannelId) : 0,
@@ -52,7 +54,8 @@ class Config
             "NL" => !is_null($systemConfigService->get($this->path . 'nlTrafficSourceNumber', $salesChannelId)) ? (int) $systemConfigService->get($this->path . 'nlTrafficSourceNumber', $salesChannelId) : 0,
             "CH" => array(
                 "de" => (!is_null($systemConfigService->get($this->path . 'deChTrafficSourceNumber', $salesChannelId)) ? (int) $systemConfigService->get($this->path . 'deChTrafficSourceNumber', $salesChannelId) : 0),
-                "fr" => (!is_null($systemConfigService->get($this->path . 'frChTrafficSourceNumber', $salesChannelId)) ? (int) $systemConfigService->get($this->path . 'frChTrafficSourceNumber', $salesChannelId) : 0)
+                "fr" => (!is_null($systemConfigService->get($this->path . 'frChTrafficSourceNumber', $salesChannelId)) ? (int) $systemConfigService->get($this->path . 'frChTrafficSourceNumber', $salesChannelId) : 0),
+                "it" => (!is_null($systemConfigService->get($this->path . 'itChTrafficSourceNumber', $salesChannelId)) ? (int) $systemConfigService->get($this->path . 'itChTrafficSourceNumber', $salesChannelId) : 0)
             ),
             "FR" => !is_null($systemConfigService->get($this->path . 'frTrafficSourceNumber', $salesChannelId)) ? (int) $systemConfigService->get($this->path . 'frTrafficSourceNumber', $salesChannelId) : 0,
             "IT" => !is_null($systemConfigService->get($this->path . 'itTrafficSourceNumber', $salesChannelId)) ? (int) $systemConfigService->get($this->path . 'itTrafficSourceNumber', $salesChannelId) : 0,
@@ -66,6 +69,7 @@ class Config
                 "fr" => !is_null($systemConfigService->get($this->path . 'frBeTrafficSourceNumber', $salesChannelId)) ? (int) $systemConfigService->get($this->path . 'frBeTrafficSourceNumber', $salesChannelId) : 0
             ),
             "PL" => !is_null($systemConfigService->get($this->path . 'plTrafficSourceNumber', $salesChannelId)) ? (int) $systemConfigService->get($this->path . 'plTrafficSourceNumber', $salesChannelId) : 0,
+            "NO" => !is_null($systemConfigService->get($this->path . 'noTrafficSourceNumber', $salesChannelId)) ? (int) $systemConfigService->get($this->path . 'noTrafficSourceNumber', $salesChannelId) : 0,
         );
         $this->trafficMediumNumber = array(
             "DE" => !is_null($systemConfigService->get($this->path . 'deTrafficMediumNumber', $salesChannelId)) ? (int) $systemConfigService->get($this->path . 'deTrafficMediumNumber', $salesChannelId) : 0,
@@ -73,7 +77,8 @@ class Config
             "NL" => !is_null($systemConfigService->get($this->path . 'nlTrafficMediumNumber', $salesChannelId)) ? (int) $systemConfigService->get($this->path . 'nlTrafficMediumNumber', $salesChannelId) : 0,
             "CH" => array(
                 "de" => (!is_null($systemConfigService->get($this->path . 'deChTrafficMediumNumber', $salesChannelId)) ? (int) $systemConfigService->get($this->path . 'deChTrafficMediumNumber', $salesChannelId) : 0),
-                "fr" => (!is_null($systemConfigService->get($this->path . 'frChTrafficMediumNumber', $salesChannelId)) ? (int) $systemConfigService->get($this->path . 'frChTrafficMediumNumber', $salesChannelId) : 0)
+                "fr" => (!is_null($systemConfigService->get($this->path . 'frChTrafficMediumNumber', $salesChannelId)) ? (int) $systemConfigService->get($this->path . 'frChTrafficMediumNumber', $salesChannelId) : 0),
+                "it" => (!is_null($systemConfigService->get($this->path . 'itChTrafficMediumNumber', $salesChannelId)) ? (int) $systemConfigService->get($this->path . 'itChTrafficMediumNumber', $salesChannelId) : 0)
             ),
             "FR" => !is_null($systemConfigService->get($this->path . 'frTrafficMediumNumber', $salesChannelId)) ? (int) $systemConfigService->get($this->path . 'frTrafficMediumNumber', $salesChannelId) : 0,
             "IT" => !is_null($systemConfigService->get($this->path . 'itTrafficMediumNumber', $salesChannelId)) ? (int) $systemConfigService->get($this->path . 'itTrafficMediumNumber', $salesChannelId) : 0,
@@ -87,6 +92,7 @@ class Config
                 "fr" => !is_null($systemConfigService->get($this->path . 'frBeTrafficMediumNumber', $salesChannelId)) ? (int) $systemConfigService->get($this->path . 'frBeTrafficMediumNumber', $salesChannelId) : 0
             ),
             "PL" => !is_null($systemConfigService->get($this->path . 'plTrafficMediumNumber', $salesChannelId)) ? (int) $systemConfigService->get($this->path . 'plTrafficMediumNumber', $salesChannelId) : 0,
+            "NO" => !is_null($systemConfigService->get($this->path . 'noTrafficMediumNumber', $salesChannelId)) ? (int) $systemConfigService->get($this->path . 'noTrafficMediumNumber', $salesChannelId) : 0,
         );
         $this->bannerLocation = !is_null($systemConfigService->get($this->path . 'bannerLocation', $salesChannelId)) ? $systemConfigService->get($this->path . 'bannerLocation', $salesChannelId) : self::BANNER_POSITION_BELOW_FINISH_TEASER;
     }
