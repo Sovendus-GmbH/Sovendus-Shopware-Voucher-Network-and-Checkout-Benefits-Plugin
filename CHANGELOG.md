@@ -8,3 +8,9 @@
 - Use https for flexibleiframe
 # 1.1.5
 - Fix get default SALES_CHANNEL
+# 1.1.6
+- Add support for bi lingual countries
+# 1.2.0
+- Add switzerland landing page script
+# 1.2.1
+- Remove unused code

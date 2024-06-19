@@ -19,9 +19,9 @@ class SovendusData extends Struct
     protected ?CustomerEntity $customer;
     protected ?CurrencyEntity $currency;
 
-    public bool $enabled;
-    public int $trafficSourceNumber;
-    public int $trafficMediumNumber;
+    public $enabled;
+    public $trafficSourceNumber;
+    public $trafficMediumNumber;
     public string $bannerLocation;
     public string $consumerCity;
     public string $consumerCountry;
@@ -67,15 +67,19 @@ class SovendusData extends Struct
         $this->usedCouponCode = '';
         $this->orderValue = 0;
         $this->timestamp = time();
+        $this->iframeContainerId = 'sovendus-container-1';
     }
 
-    public function initializeSovendusData(RequestStack $requestStack, ConfigService $configService, ?OrderEntity $order, ?CurrencyEntity $currency)
+    public function initializeSovendusData(RequestStack $requestStack, ConfigService $configService, ?OrderEntity $order, ?CurrencyEntity $currency, $isEnabled, $trafficSourceNumber, $trafficMediumNumber, $bannerLocation)
     {
         $this->configService = $configService;
         $this->order = $order;
         $this->currency = $currency;
         $this->timestamp = time();
-        
+        $this->enabled = json_encode($isEnabled);
+        $this->trafficSourceNumber = json_encode($trafficSourceNumber);
+        $this->trafficMediumNumber = json_encode($trafficMediumNumber);
+        $this->bannerLocation = $bannerLocation;
         $this->initializeCurrencyData();
         $this->initializeOrderData();
         $this->initializeSessionId($requestStack);
