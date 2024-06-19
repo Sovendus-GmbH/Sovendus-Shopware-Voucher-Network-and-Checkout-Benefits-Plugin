@@ -377,6 +377,31 @@
         </input-field>
     </card>
     <card>
+        <title>Portugal Settings</title>
+        <title lang="de-DE">Portugal Einstellungen</title>
+        <input-field type="bool">
+            <name>ptEnabled</name>
+            <label>Portugal Activated</label>
+            <label lang="de-DE">Portugal Aktiviert</label>
+        </input-field>
+        <input-field type="int">
+            <name>ptTrafficSourceNumber</name>
+            <label>Portugal Traffic Source Number</label>
+            <label lang="de-DE">Portugal Traffic Source Number</label>
+            <helpText>The traffic source number is used to assign your store in the Sovendus system. You can find it in your integration documentation.</helpText>
+            <helpText lang="de-DE">Durch die Traffic-Source-Number wird Ihr Shop im Sovendus System zugeordnet. Sie finden sie in Ihrer Integrations-Dokumentation.</helpText>
+            <copyable>true</copyable>
+        </input-field>
+        <input-field type="int">
+            <name>ptTrafficMediumNumber</name>
+            <label>Portugal Traffic Medium Number</label>
+            <label lang="de-DE">Portugal Traffic Medium Number</label>
+            <helpText>The traffic medium number is used to assign your integration in the Sovendus system. You can find it in your integration documentation.</helpText>
+            <helpText lang="de-DE">Durch die Traffic-Medium-Number wird Ihre Einbindung im Sovendus System zugeordnet. Sie finden sie in Ihrer Integrations-Dokumentation.</helpText>
+            <copyable>true</copyable>
+        </input-field>
+    </card>
+    <card>
         <title>Display Settings</title>
         <title lang="de-DE">Anzeige Einstellungen</title>
         <input-field type="single-select">
