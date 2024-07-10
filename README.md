@@ -5,6 +5,9 @@ Official Sovendus Voucher Network & Checkout Benefits Plugin for Shopware
 > [!WARNING]
 > This plugin is currently not supported by Shopware Cloud and only works in self hosted environments.
 
+> [!WARNING]
+> This plugin only works with Shopware 6.x.x
+
 ## Install through Composer
 
 1. Open a terminal and cd into your Shopware installation directory (where composer.json file resides)
