@@ -4,27 +4,7 @@
   {{ parent() }}
   {% set sovendusData = context.context.extensions.sovendusData %}
   {% if sovendusData.enabled and sovendusData.trafficSourceNumber and sovendusData.trafficMediumNumber %}
-    <script data-usercentrics="Sovendus-personalized">
-        window.sovConsumer = {
-            consumerSalutation: '{{ sovendusData.consumerSalutation }}',
-            consumerFirstName: '{{ sovendusData.consumerFirstName }}',
-            consumerLastName: '{{ sovendusData.consumerLastName }}',
-            consumerEmail: '{{ sovendusData.consumerEmail }}',
-            {% if sovendusData.consumerPhone %}
-                consumerPhone : '{{ sovendusData.consumerPhone }}',
-            {% endif %}
-            {% if sovendusData.consumerStreet %}
-                consumerStreet: '{{ sovendusData.consumerStreet }}',
-            {% endif %}
-            {% if sovendusData.consumerStreetNumber %}
-                consumerStreetNumber: '{{ sovendusData.consumerStreetNumber }}',
-            {% endif %}
-            consumerZipcode: '{{ sovendusData.consumerZipcode }}',
-            consumerCity: '{{ sovendusData.consumerCity }}',
-            consumerCountry: '{{ sovendusData.consumerCountry }}',
-        };
-    </script>
-    <script data-usercentrics="Sovendus">
+    <script>
         let isActive = false;
         let trafficSourceNumber = "";
         let trafficMediumNumber = "";
@@ -40,30 +20,68 @@
             isActive = true;
         }
         if (isActive && Number(trafficSourceNumber) > 0 && Number(trafficMediumNumber) > 0){
-            window.sovIframes = window.sovIframes || [];
-            window.sovIframes.push({
-                trafficSourceNumber: trafficSourceNumber,
-                trafficMediumNumber: trafficMediumNumber,
-                iframeContainerId: '{{ sovendusData.iframeContainerId }}',
-                timestamp: '{{ sovendusData.timestamp }}',
-                sessionId: '{{ sovendusData.sessionId }}',
-                orderId: '{{ sovendusData.orderId }}',
-                orderValue: '{{ sovendusData.orderValue }}',
-                orderCurrency: '{{ sovendusData.orderCurrency }}',
-                integrationType: "shopware-1.2.2",
-                {% if sovendusData.usedCouponCode %}
-                    usedCouponCode: '{{ sovendusData.usedCouponCode }}',
-                {% endif %}
-            });
-            window.sovConsumer = window.sovConsumer || {};
-            var script = document.createElement("script");
-            script.type = "text/javascript";
-            script.async = true;
-            script.src =
-                window.location.protocol +
-                "//api.sovendus.com/sovabo/common/js/flexibleIframe.js";
-            script.setAttribute('data-usercentrics', 'Sovendus');
-            document.body.appendChild(script);
+            const usesUserCentrics = !!document.getElementById("usercentrics-cmp")
+            const sovendusPersonalizedScript = document.createElement("script")
+            if (usesUserCentrics) {
+                sovendusPersonalizedScript.setAttribute("data-usercentrics", "Sovendus-personalized")
+                sovendusPersonalizedScript.type = "text/plain"
+            } else {
+                sovendusPersonalizedScript.type = "text/javascript"
+            }
+            sovendusPersonalizedScript.innerHTML = `
+                window.sovConsumer = {
+                    consumerSalutation: '{{ sovendusData.consumerSalutation }}',
+                    consumerFirstName: '{{ sovendusData.consumerFirstName }}',
+                    consumerLastName: '{{ sovendusData.consumerLastName }}',
+                    consumerEmail: '{{ sovendusData.consumerEmail }}',
+                    {% if sovendusData.consumerPhone %}
+                        consumerPhone : '{{ sovendusData.consumerPhone }}',
+                    {% endif %}
+                    {% if sovendusData.consumerStreet %}
+                        consumerStreet: '{{ sovendusData.consumerStreet }}',
+                    {% endif %}
+                    {% if sovendusData.consumerStreetNumber %}
+                        consumerStreetNumber: '{{ sovendusData.consumerStreetNumber }}',
+                    {% endif %}
+                    consumerZipcode: '{{ sovendusData.consumerZipcode }}',
+                    consumerCity: '{{ sovendusData.consumerCity }}',
+                    consumerCountry: '{{ sovendusData.consumerCountry }}',
+                };
+            `
+            document.head.appendChild(sovendusPersonalizedScript)
+            const sovendusScript = document.createElement("script")
+            if (usesUserCentrics) {
+            sovendusScript.setAttribute("data-usercentrics", "Sovendus")
+            sovendusScript.type = "text/plain"
+            } else {
+            sovendusScript.type = "text/javascript"
+            }
+            sovendusScript.innerHTML = `
+                window.sovIframes = window.sovIframes || [];
+                window.sovIframes.push({
+                    trafficSourceNumber: trafficSourceNumber,
+                    trafficMediumNumber: trafficMediumNumber,
+                    iframeContainerId: '{{ sovendusData.iframeContainerId }}',
+                    timestamp: '{{ sovendusData.timestamp }}',
+                    sessionId: '{{ sovendusData.sessionId }}',
+                    orderId: '{{ sovendusData.orderId }}',
+                    orderValue: '{{ sovendusData.orderValue }}',
+                    orderCurrency: '{{ sovendusData.orderCurrency }}',
+                    integrationType: "shopware-1.2.2",
+                    {% if sovendusData.usedCouponCode %}
+                        usedCouponCode: '{{ sovendusData.usedCouponCode }}',
+                    {% endif %}
+                });
+                window.sovConsumer = window.sovConsumer || {};
+                var script = document.createElement("script");
+                script.type = "text/javascript";
+                script.async = true;
+                script.src =
+                    window.location.protocol +
+                    "//api.sovendus.com/sovabo/common/js/flexibleIframe.js";
+                script.setAttribute('data-usercentrics', 'Sovendus');
+                document.body.appendChild(script);
+            `
         };
     </script>
   {% endif %}
