@@ -60,15 +60,15 @@
                 sovendusScript.innerHTML = `
                     window.sovIframes = window.sovIframes || [];
                     window.sovIframes.push({
-                        trafficSourceNumber: trafficSourceNumber,
-                        trafficMediumNumber: trafficMediumNumber,
+                        trafficSourceNumber: ${trafficSourceNumber},
+                        trafficMediumNumber: ${trafficMediumNumber},
                         iframeContainerId: '{{ sovendusData.iframeContainerId }}',
                         timestamp: '{{ sovendusData.timestamp }}',
                         sessionId: '{{ sovendusData.sessionId }}',
                         orderId: '{{ sovendusData.orderId }}',
                         orderValue: '{{ sovendusData.orderValue }}',
                         orderCurrency: '{{ sovendusData.orderCurrency }}',
-                        integrationType: "shopware-1.2.6",
+                        integrationType: "shopware-1.2.7",
                         {% if sovendusData.usedCouponCode %}
                             usedCouponCode: '{{ sovendusData.usedCouponCode }}',
                         {% endif %}
