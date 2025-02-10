@@ -1,7 +1,7 @@
 {
     "name": "sovendus/sovendus_voucher_network_and_checkout_benefits",
     "description": "Sovendus - Voucher Network & Checkout Benefits",
-    "version": "1.2.7",
+    "version": "2.0.0",
     "type": "shopware-platform-plugin",
     "license": "GPL-3.0",
     "authors": [
@@ -37,5 +37,15 @@
         "psr-4": {
             "Sov\\Sovendus\\": "src/"
         }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "yarn install",
+            "yarn build"
+        ],
+        "post-update-cmd": [
+            "yarn install",
+            "yarn build"
+        ]
     }
 }
