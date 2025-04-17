@@ -1,0 +1,54 @@
+{% sw_extends '@Storefront/storefront/base.html.twig' %}
+
+{% block base_head %}
+	{{ parent() }}
+	<style>
+		body {
+			padding: 20px;
+			font-family: Arial, sans-serif;
+		}
+		.sovendus-settings-container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 20px;
+			border: 1px solid #ddd;
+			border-radius: 5px;
+			background-color: #fff;
+		}
+		h1 {
+			color: #333;
+			margin-bottom: 20px;
+		}
+	</style>
+{% endblock %}
+
+{% block base_content %}
+	<div class="container">
+		<h1>Sovendus Settings</h1>
+		<div id="sovendus-settings-container" style="min-height: 600px;"></div>
+	</div>
+{% endblock %}
+
+{% block base_footer %}
+	{{ parent() }}
+	<script>
+		// Define a minimal context for the React app
+window.shopware = {
+context: {
+api: {
+assetsPath: '{{ asset('') }}'
+},
+csrf: {
+token: '{{ csrf_token('sovendus-settings') }}'
+}
+}
+};
+
+// Define API endpoints
+window.sovendusApi = {
+getSettings: '{{ path('frontend.sovendus.settings') }}',
+saveSettings: '{{ path('frontend.sovendus.settings.save') }}'
+};
+	</script>
+	<script src="{{ asset('bundles/sovendusplugin/storefront/js/standalone-settings.js') }}"></script>
+{% endblock %}

@@ -1,7 +1,7 @@
 {
-    "name": "sovendus/sovendus_voucher_network_and_checkout_benefits",
+    "name": "sovendus/sovendus_app",
     "description": "Sovendus - Voucher Network & Checkout Benefits",
-    "version": "1.2.7",
+    "version": "2.0.0",
     "type": "shopware-platform-plugin",
     "license": "GPL-3.0",
     "authors": [
@@ -17,8 +17,8 @@
         "shopware-plugin-class": "Sov\\Sovendus\\SovendusPlugin",
         "copyright": "Sovendus",
         "label": {
-            "de-DE": "Sovendus - Voucher Network & Checkout Benefits",
-            "en-GB": "Sovendus - Voucher Network & Checkout Benefits"
+            "de-DE": "Sovendus App",
+            "en-GB": "Sovendus App"
         },
         "description": {
             "de-DE": "Sovendus",

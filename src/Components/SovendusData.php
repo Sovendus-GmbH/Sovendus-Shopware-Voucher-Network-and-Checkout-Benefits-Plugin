@@ -40,6 +40,8 @@ class SovendusData extends Struct
     public float $orderValue;
     public int $timestamp;
     public array $bannerLocationConstants;
+    public string $iframeContainerId;
+    public string $jsConfig; // Added property to store JavaScript configuration
 
     public function __construct()
     {
@@ -68,6 +70,7 @@ class SovendusData extends Struct
         $this->orderValue = 0;
         $this->timestamp = time();
         $this->iframeContainerId = 'sovendus-container-1';
+        $this->jsConfig = '{}'; // Initialize with empty JSON object
     }
 
     public function initializeSovendusData(RequestStack $requestStack, ConfigService $configService, ?OrderEntity $order, ?CurrencyEntity $currency, $isEnabled, $trafficSourceNumber, $trafficMediumNumber, $bannerLocation)
@@ -90,7 +93,7 @@ class SovendusData extends Struct
             $this->orderCurrency = $this->currency->getIsoCode();
         }
     }
-    
+
     public function initializeCustomerData(?CustomerEntity $customer): void
     {
         $this->customer = $customer;
@@ -131,7 +134,7 @@ class SovendusData extends Struct
         $this->consumerZipcode = $address->getZipcode();
         $this->consumerCity = $address->getCity();
         $this->initializeStreetAndStreetNumber($address->getStreet());
-        if (!is_null($address->getCountry())) {                
+        if (!is_null($address->getCountry())) {
             $this->consumerCountry = $address->getCountry()->iso;
         }
         if (!is_null($address->getPhoneNumber())) {
@@ -175,5 +178,4 @@ class SovendusData extends Struct
     {
         return ($salutationKey == 'mr') ? 'Mr.' : (($salutationKey == 'mrs') ? "Mrs." : "");
     }
-
 }

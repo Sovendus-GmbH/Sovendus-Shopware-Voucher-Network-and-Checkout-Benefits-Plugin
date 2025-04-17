@@ -1,0 +1,26 @@
+{% sw_extends '@Storefront/storefront/base.html.twig' %}
+
+{% block base_content %}
+	<div class="container">
+		<h1>Sovendus Settings</h1>
+		<div id="sovendus-settings-container" style="min-height: 600px;"></div>
+	</div>
+{% endblock %}
+
+{% block base_javascript %}
+	{{ parent() }}
+	<script>
+		// Define a minimal Shopware context for the React app
+window.shopware = {
+context: {
+api: {
+assetsPath: '{{ asset('') }}'
+},
+csrf: {
+token: '{{ csrf_token('sovendus-settings') }}'
+}
+}
+};
+	</script>
+	<script src="{{ asset('bundles/sovendusplugin/administration/js/frontend_react_loader.js') }}"></script>
+{% endblock %}

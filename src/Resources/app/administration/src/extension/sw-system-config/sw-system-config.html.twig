@@ -1,0 +1,17 @@
+{% block sw_system_config %}
+    {% block sw_system_config_sovendus %}
+        <div v-if="isSovendusConfig" class="sw-system-config">
+            <sw-card-view>
+                <sw-card title="Sovendus App Settings">
+                    <div id="sovendus-settings-container" style="min-height: 600px;"></div>
+                </sw-card>
+            </sw-card-view>
+        </div>
+    {% endblock %}
+
+    {% block sw_system_config_default %}
+        <div v-else class="sw-system-config">
+            {% parent %}
+        </div>
+    {% endblock %}
+{% endblock %}

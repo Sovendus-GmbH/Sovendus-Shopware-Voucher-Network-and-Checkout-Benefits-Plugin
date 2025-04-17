@@ -1,0 +1,11 @@
+{
+    "sovendus-settings": {
+        "general": {
+            "mainMenuItemGeneral": "Sovendus App",
+            "descriptionTextModule": "Sovendus App Settings",
+            "errorTitle": "Error",
+            "buttonSave": "Save",
+            "configCardTitle": "Sovendus App Settings"
+        }
+    }
+}
