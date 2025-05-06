@@ -4,20 +4,17 @@ const buildConfig: BuildConfig = {
   foldersToClean: [
     "src/Resources/public/storefront/js",
     "src/Resources/public/administration/js",
+    "src/Resources/app/administration/src/main.js", // Add main.js to clean
   ],
   filesToCompile: [
     {
       sovOptions: {
-        input: "src/Resources/app/administration/src/admin-frontend/frontend_react_loader.ts",
-        output: "src/Resources/public/administration/js/frontend_react_loader.js",
+        input:
+          "src/Resources/app/administration/src/admin-frontend/frontend_react_loader.ts",
+        output: "src/Resources/app/administration/src/main.js", // Changed output path
         type: "react-tailwind",
-      },
-    },
-    {
-      sovOptions: {
-        input: "src/Resources/app/storefront/src/standalone-settings.js",
-        output: "src/Resources/public/storefront/js/standalone-settings.js",
-        type: "vanilla",
+        bundleReact: true,
+        
       },
     },
     {

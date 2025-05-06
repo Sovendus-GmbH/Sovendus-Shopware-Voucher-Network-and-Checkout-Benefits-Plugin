@@ -1,12 +1,26 @@
 {% sw_extends '@parent/storefront/page/content/index.html.twig' %}
 
+{% block base_content %}
+	{{ parent() }}
+	<!-- Sovendus Content Debug Info -->
+	<div style="padding: 10px; margin: 10px; border: 1px solid green; background-color: #eeffee;">
+		<h3>Sovendus Content Debug Info</h3>
+		<p>Template loaded in content block: src/Resources/views/storefront/page/content/index.html.twig</p>
+	</div>
+{% endblock %}
+
 {% block base_javascript %}
 	{{ parent() }}
 	{% set sovendusPageData = context.context.extensions.sovendusPageData %}
-	{% if sovendusPageData %}
-		<script>
-			window.sovPageConfig = {{ sovendusPageData.get('jsConfig')|raw }};
-		</script>
-		<script src="{{ asset('bundles/sovendusplugin/storefront/js/sovendus-page.js') }}"></script>
-	{% endif %}
+	<!-- Sovendus Debug Info -->
+	<div style="padding: 10px; margin: 10px; border: 1px solid blue; background-color: #eeeeff;">
+		<h3>Sovendus Page Debug Info</h3>
+		<p>Template loaded: src/Resources/views/storefront/page/content/index.html.twig</p>
+	</div>
+	<script>
+		console.log('Sovendus page script loaded');
+window.sovPageConfig = {{ sovendusPageData.jsConfig|raw }};
+console.log('Sovendus page config:', window.sovPageConfig);
+	</script>
+	<script src="{{ asset('bundles/sovendus/storefront/js/sovendus-page.js') }}"></script>
 {% endblock %}

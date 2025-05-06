@@ -1,0 +1,18 @@
+{
+  "name": "sovendus/ps_sovendus",
+  "description": "Sovendus App",
+  "homepage": "https://sovendus.com",
+  "license": "GPL-3.0",
+  "authors": [
+    {
+      "name": "Sovendus - Marcus Brandstätter"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0"
+  },
+  "require-dev": {
+    "prestashop/php-dev-tools": "^3.4"
+  },
+  "type": "prestashop-module"
+}

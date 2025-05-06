@@ -1,0 +1,16 @@
+parameters:
+  level: 0
+  paths:
+    - .
+  excludePaths:
+    - vendor/
+    - tests/
+  ignoreErrors:
+    - "#Class [a-zA-Z0-9\\_]+ (extends|implements) unknown class#"
+    - "#Call to (static method|method|function) [a-zA-Z0-9\\_]+\\(\\) on (an unknown class|class-string)#"
+    - "#Access to property \\$[a-zA-Z0-9\\_]+ on an unknown class#"
+    - "#Instantiated class [a-zA-Z0-9\\_]+ not found#"
+    - "#Constant [A-Z0-9\\_]+ not found#"
+    - "#Parameter \\#1 \\$prefix of function uniqid expects string, int<0, max> given#"
+  checkMissingIterableValueType: false
+  checkGenericClassInNonGenericObjectType: false

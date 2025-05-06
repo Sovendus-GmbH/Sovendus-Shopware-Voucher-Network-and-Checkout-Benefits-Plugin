@@ -1,5 +1,9 @@
 {
-    "recommendations": [
-        "junstyle.twig-language"
-    ]
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "streetsidesoftware.code-spell-checker",
+    "gruntfuggly.todo-tree",
+    "junstyle.twig-language"
+
+  ]
 }

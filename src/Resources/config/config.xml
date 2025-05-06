@@ -1,17 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/master/src/Core/System/SystemConfig/Schema/config.xsd">
-    <card>
-        <title>Sovendus App Settings</title>
-        <title lang="de-DE">Sovendus App Einstellungen</title>
-        <input-field type="bool">
-            <name>hidden</name>
-            <label>Hidden</label>
-            <label lang="de-DE">Versteckt</label>
-            <defaultValue>true</defaultValue>
-            <disabled>true</disabled>
-            <helpText>This field is hidden and only used to trigger the React UI.</helpText>
-            <helpText lang="de-DE">Dieses Feld ist versteckt und wird nur verwendet, um die React-UI zu laden.</helpText>
-        </input-field>
-    </card>
+<?xml version="1.0"?>
+<config>
+	<card>
+		<title>
+			Sovendus Plugin Settings
+		</title>
+	</card>
 </config>

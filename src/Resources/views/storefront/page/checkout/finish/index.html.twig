@@ -1,16 +1,46 @@
 {% sw_extends '@parent/storefront/page/checkout/finish/index.html.twig' %}
 
 {% block base_body_inner %}
-	{% set sovendusData = context.context.extensions.sovendusData %}
-	{% if sovendusData.enabled and sovendusData.trafficSourceNumber and sovendusData.trafficMediumNumber %}
-		<div id="sovendus-integration-container"></div>
-		{{ parent() }}
+	<div id="sovendus-integration-container"></div>
+	{{ parent() }}
 
-		<script>
-			window.sovThankyouConfig = {{ sovendusData.jsConfig|raw }};
-		</script>
-		<script src="{{ asset('bundles/sovendusplugin/storefront/js/thankyou-page.js') }}"></script>
-	{% else %}
-		{{ parent() }}
-	{% endif %}
+	<!-- Create a debug div to show what's happening -->
+	<div style="padding: 10px; margin: 10px; border: 1px solid red; background-color: #ffeeee;">
+		<h3>Sovendus Debug Info</h3>
+		<p>Testing Sovendus integration</p>
+	</div>
+
+	<!-- Define the configuration directly in the page -->
+	<script>
+		// Define a minimal test configuration
+window.sovThankyouConfig = {
+settings: {},
+iframeContainerQuerySelector: {
+selector: '#sovendus-integration-container',
+where: 'none'
+},
+integrationType: 'shopware-plugin',
+orderData: {
+orderId: 'test-order-123',
+orderValue: {
+netOrderValue: 100
+},
+orderCurrency: 'EUR'
+},
+customerData: {
+consumerFirstName: 'Test',
+consumerLastName: 'User',
+consumerEmail: 'test@example.com',
+consumerStreetWithNumber: 'Test Street 123',
+consumerZipcode: '12345',
+consumerCity: 'Test City',
+consumerCountry: 'DE',
+consumerPhone: '123456789'
+}
+};
+console.log('Sovendus config defined:', window.sovThankyouConfig);
+	</script>
+
+	<!-- Load the Sovendus script after the configuration is defined -->
+	<script src="{{ asset('bundles/sovendusplugin/storefront/js/thankyou-page.js') }}"></script>
 {% endblock %}

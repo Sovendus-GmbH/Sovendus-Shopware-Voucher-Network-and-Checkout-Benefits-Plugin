@@ -58,8 +58,8 @@ class ContentPageSubscriber implements EventSubscriberInterface
         ];
 
         // Create a data object and add the configuration
-        $pageData = new \Shopware\Core\Framework\Struct\ArrayStruct();
-        $pageData->set('jsConfig', Json::encode($jsConfig));
+        $pageData = new SovendusPageData();
+        $pageData->jsConfig = Json::encode($jsConfig);
 
         // Add the data to the page context
         $event->getContext()->addExtension(self::EXTENSION_NAME, $pageData);
