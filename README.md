@@ -39,7 +39,7 @@ This plugin is released as open source under the GPL v3 license. We welcome bug 
 
 ## Additional setup for usercentrics
 
-I case you are using the cookie consent tool usercentrics, please follow the steps below
+In case you are using the cookie consent tool usercentrics, please follow the steps below
 
 1. Add two custom data processing services
 2. The first service is called Sovendus and should be in the essential category
